@@ -22,7 +22,7 @@ Essa aplicação tem como objetivo utilizar a biblioteca do Gauge Chart no Andro
 
 ## Tecnologias Utilizadas 🚀
 
-- **Biblioteca Gauge**: Disponivel atráves desse repositório: https://github.com/Gruzer/simple-gauge-android
+- **Biblioteca Gauge**: Disponivel através desse repositório: https://github.com/Gruzer/simple-gauge-android
 
 ## Dependências Implementadas
 Em settings.graddle.kts foi colocado: 
@@ -38,7 +38,7 @@ dependencyResolutionManagement {
 ```
 
 
-Nas depedências foi colocado:
+Nas dependências foi colocado:
 ```kts
 dependencies {
 	implementation ("com.github.Gruzer:simple-gauge-android:0.3.1")
