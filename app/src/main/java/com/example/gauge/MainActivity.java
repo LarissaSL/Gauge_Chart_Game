@@ -134,7 +134,11 @@ public class MainActivity extends AppCompatActivity {
 
         } else if (jogadorProgress >= 100) {
             txtVencedor.setText("Vencedor: Jogador!");
-            pcLevel++;
+            if(this.pcLevel > 2 && this.pcLevel != 1) {
+                pcLevel = 0;
+            } else {
+                pcLevel++;
+            }
             atualizarNivelPC();
             mostrarToastVencedor("Vamboraa");
             resetJogo();
