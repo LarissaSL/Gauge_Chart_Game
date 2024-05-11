@@ -31,12 +31,13 @@
         android:id="@+id/txtPc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Player: PC"
-        android:textSize="18sp"
-        android:textStyle="bold"
         android:layout_below="@id/layoutVencedor"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:text="Player: PC"
+        android:textColor="#131313"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <com.ekn.gruzer.gaugelibrary.HalfGauge
         android:id="@+id/pcGauge"
@@ -69,12 +70,13 @@
         android:id="@+id/txtJogador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Player: Jogador"
-        android:textSize="18sp"
-        android:textStyle="bold"
         android:layout_below="@id/txtKmPc"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:layout_centerHorizontal="true"/>
+        android:text="Player: Jogador"
+        android:textColor="#131313"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <com.ekn.gruzer.gaugelibrary.HalfGauge
         android:id="@+id/jogadorGauge"

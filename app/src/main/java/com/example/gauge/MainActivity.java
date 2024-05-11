@@ -31,6 +31,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        iniciarViews();
+        iniciarGauge();
+        iniciarEventosDeClick();
+
+        // Iniciando o progresso automatico do PC
+        handler.post(pcProgressRunnable);
+    }
+
+    private void iniciarViews() {
         pcGauge = findViewById(R.id.pcGauge);
         jogadorGauge = findViewById(R.id.jogadorGauge);
         pcProgressBar = findViewById(R.id.pcProgressBar);
@@ -42,13 +51,16 @@ public class MainActivity extends AppCompatActivity {
         txtKmJogador = findViewById(R.id.txtKmJogador);
         txtPc = findViewById(R.id.txtPc);
 
-
         pcProgressBar.setMax(100);
         jogadorProgressBar.setMax(100);
+    }
 
+    private void iniciarGauge() {
         defineFaixasDeCores(pcGauge);
         defineFaixasDeCores(jogadorGauge);
+    }
 
+    private void iniciarEventosDeClick() {
         btnAvancar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,9 +74,6 @@ public class MainActivity extends AppCompatActivity {
                 voltar();
             }
         });
-
-        // Iniciando o progresso automatico do PC
-        handler.post(pcProgressRunnable);
     }
 
     private Runnable pcProgressRunnable = new Runnable() {
@@ -83,7 +92,11 @@ public class MainActivity extends AppCompatActivity {
                     resetJogo();
                 } else {
                     txtVencedor.setText("Vencedor: Jogador!");
-                    pcLevel++;
+                    if (pcLevel == 2) {
+                        pcLevel = 0;
+                    } else {
+                        pcLevel++;
+                    }
                     resetJogo();
                 }
             }
@@ -131,10 +144,9 @@ public class MainActivity extends AppCompatActivity {
             atualizarNivelPC();
             mostrarToastVencedor("Eita...vamos de novo!");
             resetJogo();
-
         } else if (jogadorProgress >= 100) {
             txtVencedor.setText("Vencedor: Jogador!");
-            if(this.pcLevel > 2 && this.pcLevel != 1) {
+            if (this.pcLevel == 2) {
                 pcLevel = 0;
             } else {
                 pcLevel++;
