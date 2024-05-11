@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Gauge" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#0C143E</item> <!-- Azul -->
+        <item name="colorPrimaryDark">#0C143E</item> <!-- Roxo escuro -->
+        <item name="colorAccent">#0C143E</item> <!-- Verde -->
+    </style>
+
+    <style name="Theme.Gauge" parent="Base.Theme.Gauge" />
+</resources>

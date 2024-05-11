@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF4F4F4"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutVencedor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#C3BBAF"
+        android:backgroundTint="#FF9800">
+
+        <TextView
+            android:id="@+id/txtVencedor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtPc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player: PC"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/layoutVencedor"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <com.ekn.gruzer.gaugelibrary.HalfGauge
+        android:id="@+id/pcGauge"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/txtPc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <ProgressBar
+        android:id="@+id/pcProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pcGauge"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#817F7F"
+        android:max="100" />
+
+    <TextView
+        android:id="@+id/txtKmPc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 KM"
+        android:layout_below="@id/pcProgressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/txtJogador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player: Jogador"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/txtKmPc"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <com.ekn.gruzer.gaugelibrary.HalfGauge
+        android:id="@+id/jogadorGauge"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/txtJogador"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <ProgressBar
+        android:id="@+id/jogadorProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jogadorGauge"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#817F7F"
+        android:max="100" />
+
+    <TextView
+        android:id="@+id/txtKmJogador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 KM"
+        android:layout_below="@id/jogadorProgressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtKmJogador"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="17dp"
+        android:backgroundTint="#F44336"
+        android:text="Voltar" />
+
+    <Button
+        android:id="@+id/btnAvancar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtKmJogador"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@id/btnVoltar"
+        android:backgroundTint="#2196F3"
+        android:text="Avançar" />
+
+</RelativeLayout>
